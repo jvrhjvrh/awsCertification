@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-30 seg 11:07 -->
+<!-- 2021-08-30 seg 11:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AWS Certification</title>
@@ -245,21 +245,21 @@ org_html_manager.setup();  // activate after the parameters are set
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org296a5ec">1. 5 Pillars</a></li>
-<li><a href="#org5b2ec23">2. IAM(Identity and Access Management)</a>
+<li><a href="#org290eaf7">1. 5 Pillars</a></li>
+<li><a href="#org5c34eae">2. IAM(Identity and Access Management)</a>
 <ul>
-<li><a href="#org651d110">2.1. User</a></li>
-<li><a href="#org55614e9">2.2. Password</a></li>
-<li><a href="#org239b21d">2.3. Group</a></li>
-<li><a href="#org01400d2">2.4. Role</a></li>
+<li><a href="#orgabfaeb1">2.1. User</a></li>
+<li><a href="#org1f18cc9">2.2. Password</a></li>
+<li><a href="#org8ee8921">2.3. Group</a></li>
+<li><a href="#org8ca6e12">2.4. Role</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org296a5ec" class="outline-2">
-<h2 id="org296a5ec"><span class="section-number-2">1</span> 5 Pillars</h2>
+<div id="outline-container-org290eaf7" class="outline-2">
+<h2 id="org290eaf7"><span class="section-number-2">1</span> 5 Pillars</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
 
@@ -305,12 +305,12 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 
-<div id="outline-container-org5b2ec23" class="outline-2">
-<h2 id="org5b2ec23"><span class="section-number-2">2</span> IAM(Identity and Access Management)</h2>
+<div id="outline-container-org5c34eae" class="outline-2">
+<h2 id="org5c34eae"><span class="section-number-2">2</span> IAM(Identity and Access Management)</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org651d110" class="outline-3">
-<h3 id="org651d110"><span class="section-number-3">2.1</span> User</h3>
+<div id="outline-container-orgabfaeb1" class="outline-3">
+<h3 id="orgabfaeb1"><span class="section-number-3">2.1</span> User</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
@@ -318,31 +318,48 @@ It&rsquo;s possible to:
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org5e89f22"></a>Create and delete users<br /></li>
-<li><a id="orgf4279e7"></a>Add and remove groups from users<br /></li>
-<li><a id="orgf601524"></a>Add and remove permissions per user basis<br /></li>
+<li><a id="orgba0bc00"></a>Create and delete users<br /></li>
+<li><a id="org6edae55"></a>Add and remove groups from users<br /></li>
+<li><a id="org0dcfcaf"></a>Add and remove permissions per user basis<br /></li>
 </ol>
 </div>
-<div id="outline-container-org55614e9" class="outline-3">
-<h3 id="org55614e9"><span class="section-number-3">2.2</span> Password</h3>
+<div id="outline-container-org1f18cc9" class="outline-3">
+<h3 id="org1f18cc9"><span class="section-number-3">2.2</span> Password</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
 </p>
 </div>
 </div>
-<div id="outline-container-org239b21d" class="outline-3">
-<h3 id="org239b21d"><span class="section-number-3">2.3</span> Group</h3>
+<div id="outline-container-org8ee8921" class="outline-3">
+<h3 id="org8ee8921"><span class="section-number-3">2.3</span> Group</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Possible to create groups that have a set of permissions to better manage users.
+It&rsquo;s possible to:
+</p>
 </div>
-
-<div id="outline-container-org01400d2" class="outline-3">
-<h3 id="org01400d2"><span class="section-number-3">2.4</span> Role</h3>
+<ol class="org-ol">
+<li><a id="org36c9175"></a>Create, delete and edit groups<br /></li>
+</ol>
+</div>
+<div id="outline-container-org8ca6e12" class="outline-3">
+<h3 id="org8ca6e12"><span class="section-number-3">2.4</span> Role</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Possible to create roles that have a set of permissions, these roles are mostly for short durations and attributed to users and services to do things on your behalf.
+It&rsquo;s possible to:
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgbd1e73a"></a>Create, delete and edit roles<br /></li>
+</ol>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: JOÃO VICTOR RODRIGUES HILARIO</p>
-<p class="date">Created: 2021-08-30 seg 11:07</p>
+<p class="date">Created: 2021-08-30 seg 11:33</p>
 </div>
 </body>
 </html>

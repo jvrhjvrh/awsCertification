@@ -19,8 +19,13 @@
 **** Create and delete users
 **** Add and remove groups from users
 **** Add and remove permissions per user basis
-** Password
+** Password policy
 Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
 ** Group
-
+Possible to create groups that have a set of permissions to better manage users.
+It's possible to:
+**** Create, delete and edit groups
 ** Role
+Possible to create roles that have a set of permissions, these roles are mostly for short durations and attributed to users and services to do things on your behalf.
+It's possible to:
+**** Create, delete and edit roles
