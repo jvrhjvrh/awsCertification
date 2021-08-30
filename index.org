@@ -1,0 +1,26 @@
+#+TITLE: AWS Certification
+#+AUTHOR: JOÃO VICTOR RODRIGUES HILARIO
+#+INFOJS_OPT: view:info toc:1
+
+* 5 Pillars
+#+ATTR_HTML: :border 2 :rules all :frame border
+| Pillar                 | Description                                                                                                 |
+|------------------------+-------------------------------------------------------------------------------------------------------------|
+| Operational Excellence | Ability to support development, run workloads effectively and continuously improve                          |
+| Security               | Ability to protect data, systems and assets                                                                 |
+| Reliabity              | Ability of a workload to perform its intended function correctly and consistently. Also tests               |
+| Performance Efficiency | Ability to use resources efficiently and upgrade and maintain efficiency as demands and technologies evolve |
+| Cost Optimization      | Ability to deliver at the lowest price                                                                      |
+
+* IAM(Identity and Access Management)
+** User
+ Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
+ It's possible to:
+**** Create and delete users
+**** Add and remove groups from users
+**** Add and remove permissions per user basis
+** Password
+Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
+** Group
+
+** Role
