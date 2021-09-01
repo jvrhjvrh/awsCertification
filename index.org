@@ -1,6 +1,11 @@
 #+TITLE: AWS Certification
 #+AUTHOR: JOÃO VICTOR RODRIGUES HILARIO
-#+INFOJS_OPT: view:info toc:1
+#+EMAIL: jvrodrigueshilario@gmail.com
+#+Infojs_opt: view:info
+#+OPTIONS: toc:2
+#+HTML_HEAD: <style type="text/css">
+#+HTML_HEAD: article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}html{font-family:'PT Sans',sans-serif}pre,code{font-family:'Inconsolata',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'PT Sans Narrow',sans-serif;font-weight:700}html{background-color:#073642;color:#839496;margin:1em}body{background-color:#002b36;margin:0 auto;max-width:23cm;border:1pt solid #586e75;padding:1em}code{background-color:#073642;padding:2px}a{color:#b58900}a:visited{color:#cb4b16}a:hover{color:#cb4b16}h1{color:#d33682}h2,h3,h4,h5,h6{color:#859900}pre{background-color:#002b36;color:#839496;border:1pt solid #586e75;padding:1em;box-shadow:5pt 5pt 8pt #073642}pre code{background-color:#002b36}h1{font-size:2.8em}h2{font-size:2.4em}h3{font-size:1.8em}h4{font-size:1.4em}h5{font-size:1.3em}h6{font-size:1.15em}.tag{background-color:#073642;color:#d33682;padding:0 .2em}.todo,.next,.done{color:#002b36;background-color:#dc322f;padding:0 .2em}.tag{-webkit-border-radius:.35em;-moz-border-radius:.35em;border-radius:.35em}.TODO{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#2aa198}.NEXT{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.ACTIVE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.DONE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}.WAITING{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#cb4b16}.HOLD{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.NOTE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.CANCELLED{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}
+#+HTML_HEAD: </style>
 
 * 5 Pillars
 #+ATTR_HTML: :border 2 :rules all :frame border
@@ -13,19 +18,131 @@
 | Cost Optimization      | Ability to deliver at the lowest price                                                                      |
 
 * IAM(Identity and Access Management)
++ Global interface to manage users, applications and services access to AWS resources.
 ** User
- Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
- It's possible to:
-**** Create and delete users
-**** Add and remove groups from users
-**** Add and remove permissions per user basis
+ + Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
+ + It's possible to:
+   - Create and delete users.
+   - Add and remove groups from users.
+   - Add and remove permissions per user basis.
+** Group
++ Possible to create groups that have a set of permissions to better manage users.
++ It's possible to:
+  - Create, delete and edit groups.
+** Role
++ Possible to create roles and assign them to users, applications and services to give them access to AWS resources.
++ It's possible to:
+  - Create, delete and edit roles.
 ** Password policy
 Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
-** Group
-Possible to create groups that have a set of permissions to better manage users.
-It's possible to:
-**** Create, delete and edit groups
-** Role
-Possible to create roles that have a set of permissions, these roles are mostly for short durations and attributed to users and services to do things on your behalf.
-It's possible to:
-**** Create, delete and edit roles
+** Policy Simulator
+- Allows you to test policies for each user, group and role.
+- Useful for finding permission related issues.
+- [[https://policysim.aws.amazon.com][Policy Simulator]]
+** Example policy document
+#+begin_src json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}
+#+end_src
+
+* EC2 (Elastic Compute Cloud)
++ Secure and resizable compute capacity in the cloud.
++ Like a VM in amazon's server.
++ Designed to be scalable.
++ Pay as you use.
++ Nothing wasted as it scales with demand.
+** Pricing Options
+*** On demand
+  - Pay by time used.
+  - Good for short-term applications or that have unpredictable workloads and cannot be interrupted.
+  - Good for testing.
+*** Reserved
+  - Reserve capacity, get a discount from use.
+  - Good for applications with predictable usage.
+  - Also good if you can pay up-front because there are discounts.
+  - Types:
+    + Standard Reserved Instances:
+      - Fixed instance for a fixed duration.
+    + Convertible Reserved Instances:
+      - Same as standard but allows you to change instances to others of same or greater value.
+    + Scheduled Reserved Instances:
+      - Run applications within the time window specified.
+      - Good if there are things you need to do once in a while
+        + Like a phone company that needs to calculate bills at the end of each month.
+*** Spot
+  - Purchase unused capacity at a discount.
+  - Supply and demand dictates unused capacity price.
+  - You define a maximum price and while capacity price is below it your application runs, when it goes above your application is shutdown.
+  - Good for applications that have flexible start and end times.
+  - Also for applications that need very low prices to be feasible.
+  - Also good for when you have a pontual need for large amounts of capacity.
+*** Dedicated
+  - Rent a physical server only for your use.
+  - Used when you need to comply with certain licenses and regulations that disallow multi-tenancy.
+  - Can be purchased on demand or be reserved.
+** EBS (Elastic Block Store)
++ Storage volumes attached to EC2 instances.
++ Works as a local system disk.
+*** Advantages
++ Designed for critical workloads.
++ Data is replicated to protect against hardware failure.
++ Is scalable.
++ Can change capacity and time with little to no downtime.
+*** Types
+**** General purpose SSD (gp2)
++ Balance between price and performance.
++ 3 IOPS/GB up to 16000 IOPS per volume.
++ Volumes smaller than 1 TB can burst up to 3000 IOPS.
+**** Provisioned IOPS SSD (io1)
++ High performance and highest price.
++ 50 IOPS/GB up to 64000 IOPS per volume.
++ Only option if you need more than 16000 IOPS.
++ Designed for I/O intensive applications, large databases and latency-sensitive workloads.
+**** Provisioned IOPS SSD (io2)
++ Latest generation.
++ Higher durability and more IOPS/GB.
++ 99.999% durability instead of 99.9%.
++ 500 IOPS instead of 50.
++ Limit still 64000.
++ Same price as io1.
+**** Throughput Optimized HDD (st1)
++ Low-cost HDD volume.
++ Throughput of 40 MB/s per TB.
++ Able to burst up to 250 MB/s per TB.
++ Maximum throughput of 500 MB/s per volume.
++ Cost effective way to store large amounts of data.
++ Good for frequently-accessed, throughput intensive workloads.
++ Like:
+  - Big Data.
+  - Log processing.
+  - Data warehouses.
++ Cannot be a boot volume.
+**** Cold HDD (sc1)
++ Lowest cost option.
++ Throughput of 12 MB/s per TB.
++ Able to burst up to 80 MB/s per TB.
++ Maximum throughput of 250 MB/s per volume.
++ Good for data that requires few scans per day.
++ Also for applications that need low costs and performance isn't as important.
++ Cannot be a boot volume.
+*** IOPS vs Throughput
++ IOPS
+  - Measures the number of reads and writes per second.
+  - Metric for quick transactions, low latency apps and transactional workload.
+  - Measures the ability to read and write very quickly.
++ Throughput
+  - Measure the number of bits read or written per second.
+  - Metric for large datasets, complex queries and large I/O operations.
+  - Measures the ability to deal with large datasets.
+
+* Whitepapers
+- [[https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html?did=wp_card&trk=wp_card][AWS Well Architected Framework]]
+- [[https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html?did=wp_card&trk=wp_card][Practicing Continuous Integration and Continuous Delivery on AWS]]

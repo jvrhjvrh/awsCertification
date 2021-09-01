@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-30 seg 11:33 -->
+<!-- 2021-09-01 qua 17:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AWS Certification</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="JOÃO VICTOR RODRIGUES HILARIO" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -41,21 +42,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -191,75 +192,75 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
+</style>
+<style type="text/css">
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap;word-wrap:break-word}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}html{font-family:'PT Sans',sans-serif}pre,code{font-family:'Inconsolata',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'PT Sans Narrow',sans-serif;font-weight:700}html{background-color:#073642;color:#839496;margin:1em}body{background-color:#002b36;margin:0 auto;max-width:23cm;border:1pt solid #586e75;padding:1em}code{background-color:#073642;padding:2px}a{color:#b58900}a:visited{color:#cb4b16}a:hover{color:#cb4b16}h1{color:#d33682}h2,h3,h4,h5,h6{color:#859900}pre{background-color:#002b36;color:#839496;border:1pt solid #586e75;padding:1em;box-shadow:5pt 5pt 8pt #073642}pre code{background-color:#002b36}h1{font-size:2.8em}h2{font-size:2.4em}h3{font-size:1.8em}h4{font-size:1.4em}h5{font-size:1.3em}h6{font-size:1.15em}.tag{background-color:#073642;color:#d33682;padding:0 .2em}.todo,.next,.done{color:#002b36;background-color:#dc322f;padding:0 .2em}.tag{-webkit-border-radius:.35em;-moz-border-radius:.35em;border-radius:.35em}.TODO{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#2aa198}.NEXT{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.ACTIVE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#268bd2}.DONE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}.WAITING{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#cb4b16}.HOLD{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.NOTE{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#d33682}.CANCELLED{-webkit-border-radius:.2em;-moz-border-radius:.2em;border-radius:.2em;background-color:#859900}
 </style>
 
-<script type="text/javascript" src="https://orgmode.org/org-info.js">
+<script src="https://orgmode.org/org-info.js">
 // @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
 // @license-end
 </script>
 
-<script type="text/javascript">
+<script>
 // @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
-<!--/*--><![CDATA[/*><!--*/
-org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("TOC_DEPTH", "2");
 org_html_manager.set("LINK_HOME", "");
 org_html_manager.set("LINK_UP", "");
 org_html_manager.set("LOCAL_TOC", "1");
 org_html_manager.set("VIEW_BUTTONS", "0");
 org_html_manager.set("MOUSE_HINT", "underline");
 org_html_manager.set("FIXED_TOC", "0");
-org_html_manager.set("TOC", "1");
+org_html_manager.set("TOC", "2");
 org_html_manager.set("VIEW", "info");
 org_html_manager.setup();  // activate after the parameters are set
-/*]]>*///-->
-// @license-end
-</script>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
 // @license-end
 </script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">AWS Certification</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org290eaf7">1. 5 Pillars</a></li>
-<li><a href="#org5c34eae">2. IAM(Identity and Access Management)</a>
+<li><a href="#orgcb66324">1. 5 Pillars</a></li>
+<li><a href="#org616ec65">2. IAM(Identity and Access Management)</a>
 <ul>
-<li><a href="#orgabfaeb1">2.1. User</a></li>
-<li><a href="#org1f18cc9">2.2. Password</a></li>
-<li><a href="#org8ee8921">2.3. Group</a></li>
-<li><a href="#org8ca6e12">2.4. Role</a></li>
+<li><a href="#org9ae9053">2.1. User</a></li>
+<li><a href="#orga031e82">2.2. Group</a></li>
+<li><a href="#org072aabb">2.3. Role</a></li>
+<li><a href="#orgfb84d91">2.4. Password policy</a></li>
+<li><a href="#org2169690">2.5. Policy Simulator</a></li>
+<li><a href="#orga70ff45">2.6. Example policy document</a></li>
 </ul>
 </li>
+<li><a href="#org7e90145">3. EC2 (Elastic Compute Cloud)</a>
+<ul>
+<li><a href="#org2fba376">3.1. Pricing Options</a>
+<ul>
+<li><a href="#org042c8eb">3.1.1. On demand</a></li>
+<li><a href="#org20ae47f">3.1.2. Reserved</a></li>
+<li><a href="#org59cc277">3.1.3. Spot</a></li>
+<li><a href="#orgee5f371">3.1.4. Dedicated</a></li>
+</ul>
+</li>
+<li><a href="#org7a63105">3.2. EBS (Elastic Block Store)</a>
+<ul>
+<li><a href="#org73b3958">3.2.1. Advantages</a></li>
+<li><a href="#org987c3ed">3.2.2. Types</a></li>
+<li><a href="#org2ee8d19">3.2.3. IOPS vs Throughput</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org20d2918">4. Whitepapers</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org290eaf7" class="outline-2">
-<h2 id="org290eaf7"><span class="section-number-2">1</span> 5 Pillars</h2>
+<div id="outline-container-orgcb66324" class="outline-2">
+<h2 id="orgcb66324"><span class="section-number-2">1.</span> 5 Pillars</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
 
@@ -305,61 +306,291 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 
-<div id="outline-container-org5c34eae" class="outline-2">
-<h2 id="org5c34eae"><span class="section-number-2">2</span> IAM(Identity and Access Management)</h2>
+<div id="outline-container-org616ec65" class="outline-2">
+<h2 id="org616ec65"><span class="section-number-2">2.</span> IAM(Identity and Access Management)</h2>
 <div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Global interface to manage users, applications and services access to AWS resources.</li>
+</ul>
 </div>
-<div id="outline-container-orgabfaeb1" class="outline-3">
-<h3 id="orgabfaeb1"><span class="section-number-3">2.1</span> User</h3>
+<div id="outline-container-org9ae9053" class="outline-3">
+<h3 id="org9ae9053"><span class="section-number-3">2.1.</span> User</h3>
 <div class="outline-text-3" id="text-2-1">
-<p>
-Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
-It&rsquo;s possible to:
-</p>
+<ul class="org-ul">
+<li>Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.</li>
+<li>It&rsquo;s possible to:
+<ul class="org-ul">
+<li>Create and delete users.</li>
+<li>Add and remove groups from users.</li>
+<li>Add and remove permissions per user basis.</li>
+</ul></li>
+</ul>
 </div>
-<ol class="org-ol">
-<li><a id="orgba0bc00"></a>Create and delete users<br /></li>
-<li><a id="org6edae55"></a>Add and remove groups from users<br /></li>
-<li><a id="org0dcfcaf"></a>Add and remove permissions per user basis<br /></li>
-</ol>
 </div>
-<div id="outline-container-org1f18cc9" class="outline-3">
-<h3 id="org1f18cc9"><span class="section-number-3">2.2</span> Password</h3>
+<div id="outline-container-orga031e82" class="outline-3">
+<h3 id="orga031e82"><span class="section-number-3">2.2.</span> Group</h3>
 <div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Possible to create groups that have a set of permissions to better manage users.</li>
+<li>It&rsquo;s possible to:
+<ul class="org-ul">
+<li>Create, delete and edit groups.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org072aabb" class="outline-3">
+<h3 id="org072aabb"><span class="section-number-3">2.3.</span> Role</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Possible to create roles and assign them to users, applications and services to give them access to AWS resources.</li>
+<li>It&rsquo;s possible to:
+<ul class="org-ul">
+<li>Create, delete and edit roles.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb84d91" class="outline-3">
+<h3 id="orgfb84d91"><span class="section-number-3">2.4.</span> Password policy</h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
 </p>
 </div>
 </div>
-<div id="outline-container-org8ee8921" class="outline-3">
-<h3 id="org8ee8921"><span class="section-number-3">2.3</span> Group</h3>
-<div class="outline-text-3" id="text-2-3">
-<p>
-Possible to create groups that have a set of permissions to better manage users.
-It&rsquo;s possible to:
-</p>
+<div id="outline-container-org2169690" class="outline-3">
+<h3 id="org2169690"><span class="section-number-3">2.5.</span> Policy Simulator</h3>
+<div class="outline-text-3" id="text-2-5">
+<ul class="org-ul">
+<li>Allows you to test policies for each user, group and role.</li>
+<li>Useful for finding permission related issues.</li>
+<li><a href="https://policysim.aws.amazon.com">Policy Simulator</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga70ff45" class="outline-3">
+<h3 id="orga70ff45"><span class="section-number-3">2.6.</span> Example policy document</h3>
+<div class="outline-text-3" id="text-2-6">
+<div class="org-src-container">
+<pre class="src src-json">{
+    <span style="color: #51afef;">"Version"</span>: "<span style="color: #da8548; font-weight: bold;">2012</span>-<span style="color: #da8548; font-weight: bold;">10</span>-<span style="color: #da8548; font-weight: bold;">17</span>",
+    <span style="color: #51afef;">"Statement"</span>: [
+        {
+            <span style="color: #51afef;">"Effect"</span>: <span style="color: #98be65;">"Allow"</span>,
+            <span style="color: #51afef;">"Action"</span>: <span style="color: #98be65;">"*"</span>,
+            <span style="color: #51afef;">"Resource"</span>: <span style="color: #98be65;">"*"</span>
+        }
+    ]
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e90145" class="outline-2">
+<h2 id="org7e90145"><span class="section-number-2">3.</span> EC2 (Elastic Compute Cloud)</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Secure and resizable compute capacity in the cloud.</li>
+<li>Like a VM in amazon&rsquo;s server.</li>
+<li>Designed to be scalable.</li>
+<li>Pay as you use.</li>
+<li>Nothing wasted as it scales with demand.</li>
+</ul>
+</div>
+<div id="outline-container-org2fba376" class="outline-3">
+<h3 id="org2fba376"><span class="section-number-3">3.1.</span> Pricing Options</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org042c8eb" class="outline-4">
+<h4 id="org042c8eb"><span class="section-number-4">3.1.1.</span> On demand</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li>Pay by time used.</li>
+<li>Good for short-term applications or that have unpredictable workloads and cannot be interrupted.</li>
+<li>Good for testing.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org20ae47f" class="outline-4">
+<h4 id="org20ae47f"><span class="section-number-4">3.1.2.</span> Reserved</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<ul class="org-ul">
+<li>Reserve capacity, get a discount from use.</li>
+<li>Good for applications with predictable usage.</li>
+<li>Also good if you can pay up-front because there are discounts.</li>
+<li>Types:
+<ul class="org-ul">
+<li>Standard Reserved Instances:
+<ul class="org-ul">
+<li>Fixed instance for a fixed duration.</li>
+</ul></li>
+<li>Convertible Reserved Instances:
+<ul class="org-ul">
+<li>Same as standard but allows you to change instances to others of same or greater value.</li>
+</ul></li>
+<li>Scheduled Reserved Instances:
+<ul class="org-ul">
+<li>Run applications within the time window specified.</li>
+<li>Good if there are things you need to do once in a while
+<ul class="org-ul">
+<li>Like a phone company that needs to calculate bills at the end of each month.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org59cc277" class="outline-4">
+<h4 id="org59cc277"><span class="section-number-4">3.1.3.</span> Spot</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<ul class="org-ul">
+<li>Purchase unused capacity at a discount.</li>
+<li>Supply and demand dictates unused capacity price.</li>
+<li>You define a maximum price and while capacity price is below it your application runs, when it goes above your application is shutdown.</li>
+<li>Good for applications that have flexible start and end times.</li>
+<li>Also for applications that need very low prices to be feasible.</li>
+<li>Also good for when you have a pontual need for large amounts of capacity.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee5f371" class="outline-4">
+<h4 id="orgee5f371"><span class="section-number-4">3.1.4.</span> Dedicated</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<ul class="org-ul">
+<li>Rent a physical server only for your use.</li>
+<li>Used when you need to comply with certain licenses and regulations that disallow multi-tenancy.</li>
+<li>Can be purchased on demand or be reserved.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a63105" class="outline-3">
+<h3 id="org7a63105"><span class="section-number-3">3.2.</span> EBS (Elastic Block Store)</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Storage volumes attached to EC2 instances.</li>
+<li>Works as a local system disk.</li>
+</ul>
+</div>
+<div id="outline-container-org73b3958" class="outline-4">
+<h4 id="org73b3958"><span class="section-number-4">3.2.1.</span> Advantages</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li>Designed for critical workloads.</li>
+<li>Data is replicated to protect against hardware failure.</li>
+<li>Is scalable.</li>
+<li>Can change capacity and time with little to no downtime.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org987c3ed" class="outline-4">
+<h4 id="org987c3ed"><span class="section-number-4">3.2.2.</span> Types</h4>
+<div class="outline-text-4" id="text-3-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org36c9175"></a>Create, delete and edit groups<br /></li>
+<li><a id="org9d08a84"></a>General purpose SSD (gp2)<br />
+<div class="outline-text-5" id="text-3-2-2-1">
+<ul class="org-ul">
+<li>Balance between price and performance.</li>
+<li>3 IOPS/GB up to 16000 IOPS per volume.</li>
+<li>Volumes smaller than 1 TB can burst up to 3000 IOPS.</li>
+</ul>
+</div>
+</li>
+<li><a id="org5fdc910"></a>Provisioned IOPS SSD (io1)<br />
+<div class="outline-text-5" id="text-3-2-2-2">
+<ul class="org-ul">
+<li>High performance and highest price.</li>
+<li>50 IOPS/GB up to 64000 IOPS per volume.</li>
+<li>Only option if you need more than 16000 IOPS.</li>
+<li>Designed for I/O intensive applications, large databases and latency-sensitive workloads.</li>
+</ul>
+</div>
+</li>
+<li><a id="org4de57ff"></a>Provisioned IOPS SSD (io2)<br />
+<div class="outline-text-5" id="text-3-2-2-3">
+<ul class="org-ul">
+<li>Latest generation.</li>
+<li>Higher durability and more IOPS/GB.</li>
+<li>99.999% durability instead of 99.9%.</li>
+<li>500 IOPS instead of 50.</li>
+<li>Limit still 64000.</li>
+<li>Same price as io1.</li>
+</ul>
+</div>
+</li>
+<li><a id="org7b9b1e3"></a>Throughput Optimized HDD (st1)<br />
+<div class="outline-text-5" id="text-3-2-2-4">
+<ul class="org-ul">
+<li>Low-cost HDD volume.</li>
+<li>Throughput of 40 MB/s per TB.</li>
+<li>Able to burst up to 250 MB/s per TB.</li>
+<li>Maximum throughput of 500 MB/s per volume.</li>
+<li>Cost effective way to store large amounts of data.</li>
+<li>Good for frequently-accessed, throughput intensive workloads.</li>
+<li>Like:
+<ul class="org-ul">
+<li>Big Data.</li>
+<li>Log processing.</li>
+<li>Data warehouses.</li>
+</ul></li>
+<li>Cannot be a boot volume.</li>
+</ul>
+</div>
+</li>
+<li><a id="org1f7ba8e"></a>Cold HDD (sc1)<br />
+<div class="outline-text-5" id="text-3-2-2-5">
+<ul class="org-ul">
+<li>Lowest cost option.</li>
+<li>Throughput of 12 MB/s per TB.</li>
+<li>Able to burst up to 80 MB/s per TB.</li>
+<li>Maximum throughput of 250 MB/s per volume.</li>
+<li>Good for data that requires few scans per day.</li>
+<li>Also for applications that need low costs and performance isn&rsquo;t as important.</li>
+<li>Cannot be a boot volume.</li>
+</ul>
+</div>
+</li>
 </ol>
 </div>
-<div id="outline-container-org8ca6e12" class="outline-3">
-<h3 id="org8ca6e12"><span class="section-number-3">2.4</span> Role</h3>
-<div class="outline-text-3" id="text-2-4">
-<p>
-Possible to create roles that have a set of permissions, these roles are mostly for short durations and attributed to users and services to do things on your behalf.
-It&rsquo;s possible to:
-</p>
+<div id="outline-container-org2ee8d19" class="outline-4">
+<h4 id="org2ee8d19"><span class="section-number-4">3.2.3.</span> IOPS vs Throughput</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>IOPS
+<ul class="org-ul">
+<li>Measures the number of reads and writes per second.</li>
+<li>Metric for quick transactions, low latency apps and transactional workload.</li>
+<li>Measures the ability to read and write very quickly.</li>
+</ul></li>
+<li>Throughput
+<ul class="org-ul">
+<li>Measure the number of bits read or written per second.</li>
+<li>Metric for large datasets, complex queries and large I/O operations.</li>
+<li>Measures the ability to deal with large datasets.</li>
+</ul></li>
+</ul>
 </div>
-<ol class="org-ol">
-<li><a id="orgbd1e73a"></a>Create, delete and edit roles<br /></li>
-</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org20d2918" class="outline-2">
+<h2 id="org20d2918"><span class="section-number-2">4.</span> Whitepapers</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html?did=wp_card&amp;trk=wp_card">AWS Well Architected Framework</a></li>
+<li><a href="https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html?did=wp_card&amp;trk=wp_card">Practicing Continuous Integration and Continuous Delivery on AWS</a></li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: JOÃO VICTOR RODRIGUES HILARIO</p>
-<p class="date">Created: 2021-08-30 seg 11:33</p>
+<p class="date">Created: 2021-09-01 qua 17:43</p>
 </div>
 </body>
 </html>
