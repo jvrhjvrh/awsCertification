@@ -34,7 +34,7 @@
 + It's possible to:
   - Create, delete and edit roles.
 ** Password policy
-Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
+- Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
 ** Policy Simulator
 - Allows you to test policies for each user, group and role.
 - Useful for finding permission related issues.

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-01 qua 17:43 -->
+<!-- 2021-09-01 qua 17:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AWS Certification</title>
@@ -224,43 +224,43 @@ org_html_manager.setup();  // activate after the parameters are set
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgcb66324">1. 5 Pillars</a></li>
-<li><a href="#org616ec65">2. IAM(Identity and Access Management)</a>
+<li><a href="#org2751b17">1. 5 Pillars</a></li>
+<li><a href="#org38f1b37">2. IAM(Identity and Access Management)</a>
 <ul>
-<li><a href="#org9ae9053">2.1. User</a></li>
-<li><a href="#orga031e82">2.2. Group</a></li>
-<li><a href="#org072aabb">2.3. Role</a></li>
-<li><a href="#orgfb84d91">2.4. Password policy</a></li>
-<li><a href="#org2169690">2.5. Policy Simulator</a></li>
-<li><a href="#orga70ff45">2.6. Example policy document</a></li>
+<li><a href="#org393cb74">2.1. User</a></li>
+<li><a href="#org2a4f6ce">2.2. Group</a></li>
+<li><a href="#org045c8b6">2.3. Role</a></li>
+<li><a href="#orga92f223">2.4. Password policy</a></li>
+<li><a href="#orgc12f4c0">2.5. Policy Simulator</a></li>
+<li><a href="#org76b5990">2.6. Example policy document</a></li>
 </ul>
 </li>
-<li><a href="#org7e90145">3. EC2 (Elastic Compute Cloud)</a>
+<li><a href="#orgc1fae27">3. EC2 (Elastic Compute Cloud)</a>
 <ul>
-<li><a href="#org2fba376">3.1. Pricing Options</a>
+<li><a href="#org8675a99">3.1. Pricing Options</a>
 <ul>
-<li><a href="#org042c8eb">3.1.1. On demand</a></li>
-<li><a href="#org20ae47f">3.1.2. Reserved</a></li>
-<li><a href="#org59cc277">3.1.3. Spot</a></li>
-<li><a href="#orgee5f371">3.1.4. Dedicated</a></li>
+<li><a href="#org95d772f">3.1.1. On demand</a></li>
+<li><a href="#org97293a7">3.1.2. Reserved</a></li>
+<li><a href="#org38a64ff">3.1.3. Spot</a></li>
+<li><a href="#orgb92392f">3.1.4. Dedicated</a></li>
 </ul>
 </li>
-<li><a href="#org7a63105">3.2. EBS (Elastic Block Store)</a>
+<li><a href="#org656219b">3.2. EBS (Elastic Block Store)</a>
 <ul>
-<li><a href="#org73b3958">3.2.1. Advantages</a></li>
-<li><a href="#org987c3ed">3.2.2. Types</a></li>
-<li><a href="#org2ee8d19">3.2.3. IOPS vs Throughput</a></li>
+<li><a href="#orgbb4a783">3.2.1. Advantages</a></li>
+<li><a href="#org8be6da4">3.2.2. Types</a></li>
+<li><a href="#orgf91e336">3.2.3. IOPS vs Throughput</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org20d2918">4. Whitepapers</a></li>
+<li><a href="#org6aef48a">4. Whitepapers</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgcb66324" class="outline-2">
-<h2 id="orgcb66324"><span class="section-number-2">1.</span> 5 Pillars</h2>
+<div id="outline-container-org2751b17" class="outline-2">
+<h2 id="org2751b17"><span class="section-number-2">1.</span> 5 Pillars</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
 
@@ -306,15 +306,15 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 
-<div id="outline-container-org616ec65" class="outline-2">
-<h2 id="org616ec65"><span class="section-number-2">2.</span> IAM(Identity and Access Management)</h2>
+<div id="outline-container-org38f1b37" class="outline-2">
+<h2 id="org38f1b37"><span class="section-number-2">2.</span> IAM(Identity and Access Management)</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Global interface to manage users, applications and services access to AWS resources.</li>
 </ul>
 </div>
-<div id="outline-container-org9ae9053" class="outline-3">
-<h3 id="org9ae9053"><span class="section-number-3">2.1.</span> User</h3>
+<div id="outline-container-org393cb74" class="outline-3">
+<h3 id="org393cb74"><span class="section-number-3">2.1.</span> User</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.</li>
@@ -327,8 +327,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-orga031e82" class="outline-3">
-<h3 id="orga031e82"><span class="section-number-3">2.2.</span> Group</h3>
+<div id="outline-container-org2a4f6ce" class="outline-3">
+<h3 id="org2a4f6ce"><span class="section-number-3">2.2.</span> Group</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Possible to create groups that have a set of permissions to better manage users.</li>
@@ -339,8 +339,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org072aabb" class="outline-3">
-<h3 id="org072aabb"><span class="section-number-3">2.3.</span> Role</h3>
+<div id="outline-container-org045c8b6" class="outline-3">
+<h3 id="org045c8b6"><span class="section-number-3">2.3.</span> Role</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Possible to create roles and assign them to users, applications and services to give them access to AWS resources.</li>
@@ -351,16 +351,16 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfb84d91" class="outline-3">
-<h3 id="orgfb84d91"><span class="section-number-3">2.4.</span> Password policy</h3>
+<div id="outline-container-orga92f223" class="outline-3">
+<h3 id="orga92f223"><span class="section-number-3">2.4.</span> Password policy</h3>
 <div class="outline-text-3" id="text-2-4">
-<p>
-Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.
-</p>
+<ul class="org-ul">
+<li>Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-org2169690" class="outline-3">
-<h3 id="org2169690"><span class="section-number-3">2.5.</span> Policy Simulator</h3>
+<div id="outline-container-orgc12f4c0" class="outline-3">
+<h3 id="orgc12f4c0"><span class="section-number-3">2.5.</span> Policy Simulator</h3>
 <div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
 <li>Allows you to test policies for each user, group and role.</li>
@@ -369,8 +369,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </div>
-<div id="outline-container-orga70ff45" class="outline-3">
-<h3 id="orga70ff45"><span class="section-number-3">2.6.</span> Example policy document</h3>
+<div id="outline-container-org76b5990" class="outline-3">
+<h3 id="org76b5990"><span class="section-number-3">2.6.</span> Example policy document</h3>
 <div class="outline-text-3" id="text-2-6">
 <div class="org-src-container">
 <pre class="src src-json">{
@@ -389,8 +389,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </div>
 </div>
 
-<div id="outline-container-org7e90145" class="outline-2">
-<h2 id="org7e90145"><span class="section-number-2">3.</span> EC2 (Elastic Compute Cloud)</h2>
+<div id="outline-container-orgc1fae27" class="outline-2">
+<h2 id="orgc1fae27"><span class="section-number-2">3.</span> EC2 (Elastic Compute Cloud)</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Secure and resizable compute capacity in the cloud.</li>
@@ -400,12 +400,12 @@ Possible to create rules for passwords, like minimum size, special characters re
 <li>Nothing wasted as it scales with demand.</li>
 </ul>
 </div>
-<div id="outline-container-org2fba376" class="outline-3">
-<h3 id="org2fba376"><span class="section-number-3">3.1.</span> Pricing Options</h3>
+<div id="outline-container-org8675a99" class="outline-3">
+<h3 id="org8675a99"><span class="section-number-3">3.1.</span> Pricing Options</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org042c8eb" class="outline-4">
-<h4 id="org042c8eb"><span class="section-number-4">3.1.1.</span> On demand</h4>
+<div id="outline-container-org95d772f" class="outline-4">
+<h4 id="org95d772f"><span class="section-number-4">3.1.1.</span> On demand</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li>Pay by time used.</li>
@@ -414,8 +414,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </div>
-<div id="outline-container-org20ae47f" class="outline-4">
-<h4 id="org20ae47f"><span class="section-number-4">3.1.2.</span> Reserved</h4>
+<div id="outline-container-org97293a7" class="outline-4">
+<h4 id="org97293a7"><span class="section-number-4">3.1.2.</span> Reserved</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li>Reserve capacity, get a discount from use.</li>
@@ -443,8 +443,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </div>
-<div id="outline-container-org59cc277" class="outline-4">
-<h4 id="org59cc277"><span class="section-number-4">3.1.3.</span> Spot</h4>
+<div id="outline-container-org38a64ff" class="outline-4">
+<h4 id="org38a64ff"><span class="section-number-4">3.1.3.</span> Spot</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li>Purchase unused capacity at a discount.</li>
@@ -456,8 +456,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </div>
-<div id="outline-container-orgee5f371" class="outline-4">
-<h4 id="orgee5f371"><span class="section-number-4">3.1.4.</span> Dedicated</h4>
+<div id="outline-container-orgb92392f" class="outline-4">
+<h4 id="orgb92392f"><span class="section-number-4">3.1.4.</span> Dedicated</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <ul class="org-ul">
 <li>Rent a physical server only for your use.</li>
@@ -467,16 +467,16 @@ Possible to create rules for passwords, like minimum size, special characters re
 </div>
 </div>
 </div>
-<div id="outline-container-org7a63105" class="outline-3">
-<h3 id="org7a63105"><span class="section-number-3">3.2.</span> EBS (Elastic Block Store)</h3>
+<div id="outline-container-org656219b" class="outline-3">
+<h3 id="org656219b"><span class="section-number-3">3.2.</span> EBS (Elastic Block Store)</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Storage volumes attached to EC2 instances.</li>
 <li>Works as a local system disk.</li>
 </ul>
 </div>
-<div id="outline-container-org73b3958" class="outline-4">
-<h4 id="org73b3958"><span class="section-number-4">3.2.1.</span> Advantages</h4>
+<div id="outline-container-orgbb4a783" class="outline-4">
+<h4 id="orgbb4a783"><span class="section-number-4">3.2.1.</span> Advantages</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <ul class="org-ul">
 <li>Designed for critical workloads.</li>
@@ -486,12 +486,12 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </div>
-<div id="outline-container-org987c3ed" class="outline-4">
-<h4 id="org987c3ed"><span class="section-number-4">3.2.2.</span> Types</h4>
+<div id="outline-container-org8be6da4" class="outline-4">
+<h4 id="org8be6da4"><span class="section-number-4">3.2.2.</span> Types</h4>
 <div class="outline-text-4" id="text-3-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org9d08a84"></a>General purpose SSD (gp2)<br />
+<li><a id="org7e357f7"></a>General purpose SSD (gp2)<br />
 <div class="outline-text-5" id="text-3-2-2-1">
 <ul class="org-ul">
 <li>Balance between price and performance.</li>
@@ -500,7 +500,7 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </li>
-<li><a id="org5fdc910"></a>Provisioned IOPS SSD (io1)<br />
+<li><a id="org085d20c"></a>Provisioned IOPS SSD (io1)<br />
 <div class="outline-text-5" id="text-3-2-2-2">
 <ul class="org-ul">
 <li>High performance and highest price.</li>
@@ -510,7 +510,7 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </li>
-<li><a id="org4de57ff"></a>Provisioned IOPS SSD (io2)<br />
+<li><a id="org43c874a"></a>Provisioned IOPS SSD (io2)<br />
 <div class="outline-text-5" id="text-3-2-2-3">
 <ul class="org-ul">
 <li>Latest generation.</li>
@@ -522,7 +522,7 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </li>
-<li><a id="org7b9b1e3"></a>Throughput Optimized HDD (st1)<br />
+<li><a id="org585b4b6"></a>Throughput Optimized HDD (st1)<br />
 <div class="outline-text-5" id="text-3-2-2-4">
 <ul class="org-ul">
 <li>Low-cost HDD volume.</li>
@@ -541,7 +541,7 @@ Possible to create rules for passwords, like minimum size, special characters re
 </ul>
 </div>
 </li>
-<li><a id="org1f7ba8e"></a>Cold HDD (sc1)<br />
+<li><a id="org0c03053"></a>Cold HDD (sc1)<br />
 <div class="outline-text-5" id="text-3-2-2-5">
 <ul class="org-ul">
 <li>Lowest cost option.</li>
@@ -556,8 +556,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </li>
 </ol>
 </div>
-<div id="outline-container-org2ee8d19" class="outline-4">
-<h4 id="org2ee8d19"><span class="section-number-4">3.2.3.</span> IOPS vs Throughput</h4>
+<div id="outline-container-orgf91e336" class="outline-4">
+<h4 id="orgf91e336"><span class="section-number-4">3.2.3.</span> IOPS vs Throughput</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <ul class="org-ul">
 <li>IOPS
@@ -578,8 +578,8 @@ Possible to create rules for passwords, like minimum size, special characters re
 </div>
 </div>
 
-<div id="outline-container-org20d2918" class="outline-2">
-<h2 id="org20d2918"><span class="section-number-2">4.</span> Whitepapers</h2>
+<div id="outline-container-org6aef48a" class="outline-2">
+<h2 id="org6aef48a"><span class="section-number-2">4.</span> Whitepapers</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html?did=wp_card&amp;trk=wp_card">AWS Well Architected Framework</a></li>
@@ -590,7 +590,7 @@ Possible to create rules for passwords, like minimum size, special characters re
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: JOÃO VICTOR RODRIGUES HILARIO</p>
-<p class="date">Created: 2021-09-01 qua 17:43</p>
+<p class="date">Created: 2021-09-01 qua 17:45</p>
 </div>
 </body>
 </html>
