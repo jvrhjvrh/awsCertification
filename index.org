@@ -18,7 +18,9 @@
 | Cost Optimization      | Ability to deliver at the lowest price                                                                      |
 
 * IAM(Identity and Access Management)
-+ Global interface to manage users, applications and services access to AWS resources.
++ Global (Apply for all regions) interface to manage users, applications and services access to AWS resources.
++ Denying access is implicit for everything by default.
++ Explicit deny trumps allow.
 ** User
  + Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.
  + It's possible to:
@@ -31,6 +33,9 @@
   - Create, delete and edit groups.
 ** Role
 + Possible to create roles and assign them to users, applications and services to give them access to AWS resources.
++ Prefered option.
++ Allows you to provide access to resources without using access keys and secret keys.
++ Effect is immediate even if instance is still running.
 + It's possible to:
   - Create, delete and edit roles.
 ** Password policy
@@ -91,6 +96,8 @@
 ** EBS (Elastic Block Store)
 + Storage volumes attached to EC2 instances.
 + Works as a local system disk.
++ Possible to create new volumes from snapshots of other volumes.
++ Snapshots of encrypted volumes are encrypted and snapshots of unencrypted are unencrypted by default.
 *** Advantages
 + Designed for critical workloads.
 + Data is replicated to protect against hardware failure.
@@ -142,6 +149,65 @@
   - Measure the number of bits read or written per second.
   - Metric for large datasets, complex queries and large I/O operations.
   - Measures the ability to deal with large datasets.
+** Elastic Load Balancer
++ Distributes network traffic across a group of servers.
++ Can stop sending requests to servers with issues.
++ Easy to increase number of servers and connect them to the load balancer.
+*** Application Load Balancer
++ HTTP/HTTPS.
++ [[7 Layer Model][Layer 7]].
+*** Network Load Balancer
++ TCP.
++ High performance.
++ [[7 Layer Model][Layer 4]].
++ Handles millions of requests/s.
++ Ultra-low latency.
++ Most expensive.
+*** Classic Load Balancer (Legacy)
++ HTTP/HTTPS and TCP.
++ Support [[7 Layer Model][Layer 7]] features like sticky sessions and [[X-Forwarded-For Header][X-Forwarded-For Header]].
++ Support [[7 Layer Model][Layer 4]] load balancing for pure TCP applications.
+*** X-Forwarded-For Header
++ Identify the originating IP address of the client.
++ Used because the one calling the server will be the load balancer so its IP address will appear as the caller.
+*** Common Load Balancer Errors
++ Error 504
+  - Gateway Timeout.
+  - Target failed to respond e.g.
+    + Load balancer could not establish a connection to the target.
+    + Your application is having issues.
+** RDS (Relational Database Service)
+* Route 53
++ Amazon's DNS service.
++ Allows you to map domain names to:
+  - EC2 instances.
+  - Load Balancers.
+  - S3 buckets.
+* CLI
++ Access AWS features using command line.
++ Needs Access key id and Secret access key.
+** Pagination
++ CLI returns by default all info in blocks of 1000.
++ Adjusting pagination size may help with issues of time out or size.
++ Still retrieves full list but performs more calls with less info in each.
+* 7 Layer Model
+Conceptual Framework to describe functions of a network.
+1. Physical
+   + Bits and bytes over physical devices.
+2. Data link
+   + Physically transmits data based on MAC addresses.
+3. Network
+   + Logically routes packets, based on IP address.
+4. Transport
+   + Transmits data using TCP and UDP.
+5. Session
+   + Mantains connections and sessions.
+6. Presentation
+   + Data in a usable format.
+   + Encryption, SSH.
+7. Application
+   + What the end user sees.
+   + HTTP, Web browsers.
 
 * Whitepapers
 - [[https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html?did=wp_card&trk=wp_card][AWS Well Architected Framework]]

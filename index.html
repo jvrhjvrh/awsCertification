@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-09-01 qua 17:45 -->
+<!-- 2021-09-06 seg 23:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AWS Certification</title>
@@ -224,43 +224,60 @@ org_html_manager.setup();  // activate after the parameters are set
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2751b17">1. 5 Pillars</a></li>
-<li><a href="#org38f1b37">2. IAM(Identity and Access Management)</a>
+<li><a href="#org8d61b53">1. 5 Pillars</a></li>
+<li><a href="#org521c5d7">2. IAM(Identity and Access Management)</a>
 <ul>
-<li><a href="#org393cb74">2.1. User</a></li>
-<li><a href="#org2a4f6ce">2.2. Group</a></li>
-<li><a href="#org045c8b6">2.3. Role</a></li>
-<li><a href="#orga92f223">2.4. Password policy</a></li>
-<li><a href="#orgc12f4c0">2.5. Policy Simulator</a></li>
-<li><a href="#org76b5990">2.6. Example policy document</a></li>
+<li><a href="#orge0e07d2">2.1. User</a></li>
+<li><a href="#orgea9b232">2.2. Group</a></li>
+<li><a href="#org705a663">2.3. Role</a></li>
+<li><a href="#orga16676d">2.4. Password policy</a></li>
+<li><a href="#orge126b96">2.5. Policy Simulator</a></li>
+<li><a href="#orgac49e45">2.6. Example policy document</a></li>
 </ul>
 </li>
-<li><a href="#orgc1fae27">3. EC2 (Elastic Compute Cloud)</a>
+<li><a href="#org16920fb">3. EC2 (Elastic Compute Cloud)</a>
 <ul>
-<li><a href="#org8675a99">3.1. Pricing Options</a>
+<li><a href="#orge904248">3.1. Pricing Options</a>
 <ul>
-<li><a href="#org95d772f">3.1.1. On demand</a></li>
-<li><a href="#org97293a7">3.1.2. Reserved</a></li>
-<li><a href="#org38a64ff">3.1.3. Spot</a></li>
-<li><a href="#orgb92392f">3.1.4. Dedicated</a></li>
+<li><a href="#orga50f125">3.1.1. On demand</a></li>
+<li><a href="#orgf38196a">3.1.2. Reserved</a></li>
+<li><a href="#orgc0c15f8">3.1.3. Spot</a></li>
+<li><a href="#org9aaee64">3.1.4. Dedicated</a></li>
 </ul>
 </li>
-<li><a href="#org656219b">3.2. EBS (Elastic Block Store)</a>
+<li><a href="#org5f0d4be">3.2. EBS (Elastic Block Store)</a>
 <ul>
-<li><a href="#orgbb4a783">3.2.1. Advantages</a></li>
-<li><a href="#org8be6da4">3.2.2. Types</a></li>
-<li><a href="#orgf91e336">3.2.3. IOPS vs Throughput</a></li>
+<li><a href="#org2b7d58b">3.2.1. Advantages</a></li>
+<li><a href="#orgc5024d5">3.2.2. Types</a></li>
+<li><a href="#org4b4cb47">3.2.3. IOPS vs Throughput</a></li>
 </ul>
 </li>
+<li><a href="#orgbe8a516">3.3. Elastic Load Balancer</a>
+<ul>
+<li><a href="#org9403330">3.3.1. Application Load Balancer</a></li>
+<li><a href="#org990b496">3.3.2. Network Load Balancer</a></li>
+<li><a href="#orgab8e058">3.3.3. Classic Load Balancer (Legacy)</a></li>
+<li><a href="#org61e08f5">3.3.4. X-Forwarded-For Header</a></li>
+<li><a href="#org7bbd53f">3.3.5. Common Load Balancer Errors</a></li>
 </ul>
 </li>
-<li><a href="#org6aef48a">4. Whitepapers</a></li>
+<li><a href="#org2586a4a">3.4. RDS (Relational Database Service)</a></li>
+</ul>
+</li>
+<li><a href="#org1b21e0e">4. Route 53</a></li>
+<li><a href="#orgff4f4a8">5. CLI</a>
+<ul>
+<li><a href="#orgb2dce1e">5.1. Pagination</a></li>
+</ul>
+</li>
+<li><a href="#orgb844c7a">6. 7 Layer Model</a></li>
+<li><a href="#orgddbc11d">7. Whitepapers</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2751b17" class="outline-2">
-<h2 id="org2751b17"><span class="section-number-2">1.</span> 5 Pillars</h2>
+<div id="outline-container-org8d61b53" class="outline-2">
+<h2 id="org8d61b53"><span class="section-number-2">1.</span> 5 Pillars</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="all" frame="border">
 
@@ -306,15 +323,17 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 
-<div id="outline-container-org38f1b37" class="outline-2">
-<h2 id="org38f1b37"><span class="section-number-2">2.</span> IAM(Identity and Access Management)</h2>
+<div id="outline-container-org521c5d7" class="outline-2">
+<h2 id="org521c5d7"><span class="section-number-2">2.</span> IAM(Identity and Access Management)</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
-<li>Global interface to manage users, applications and services access to AWS resources.</li>
+<li>Global (Apply for all regions) interface to manage users, applications and services access to AWS resources.</li>
+<li>Denying access is implicit for everything by default.</li>
+<li>Explicit deny trumps allow.</li>
 </ul>
 </div>
-<div id="outline-container-org393cb74" class="outline-3">
-<h3 id="org393cb74"><span class="section-number-3">2.1.</span> User</h3>
+<div id="outline-container-orge0e07d2" class="outline-3">
+<h3 id="orge0e07d2"><span class="section-number-3">2.1.</span> User</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Possible to create users that can login on aws console or keys that can be used to access services via command line or applications.</li>
@@ -327,8 +346,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a4f6ce" class="outline-3">
-<h3 id="org2a4f6ce"><span class="section-number-3">2.2.</span> Group</h3>
+<div id="outline-container-orgea9b232" class="outline-3">
+<h3 id="orgea9b232"><span class="section-number-3">2.2.</span> Group</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Possible to create groups that have a set of permissions to better manage users.</li>
@@ -339,11 +358,14 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org045c8b6" class="outline-3">
-<h3 id="org045c8b6"><span class="section-number-3">2.3.</span> Role</h3>
+<div id="outline-container-org705a663" class="outline-3">
+<h3 id="org705a663"><span class="section-number-3">2.3.</span> Role</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Possible to create roles and assign them to users, applications and services to give them access to AWS resources.</li>
+<li>Prefered option.</li>
+<li>Allows you to provide access to resources without using access keys and secret keys.</li>
+<li>Effect is immediate even if instance is still running.</li>
 <li>It&rsquo;s possible to:
 <ul class="org-ul">
 <li>Create, delete and edit roles.</li>
@@ -351,16 +373,16 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-orga92f223" class="outline-3">
-<h3 id="orga92f223"><span class="section-number-3">2.4.</span> Password policy</h3>
+<div id="outline-container-orga16676d" class="outline-3">
+<h3 id="orga16676d"><span class="section-number-3">2.4.</span> Password policy</h3>
 <div class="outline-text-3" id="text-2-4">
 <ul class="org-ul">
 <li>Possible to create rules for passwords, like minimum size, special characters requirements and time to reset.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc12f4c0" class="outline-3">
-<h3 id="orgc12f4c0"><span class="section-number-3">2.5.</span> Policy Simulator</h3>
+<div id="outline-container-orge126b96" class="outline-3">
+<h3 id="orge126b96"><span class="section-number-3">2.5.</span> Policy Simulator</h3>
 <div class="outline-text-3" id="text-2-5">
 <ul class="org-ul">
 <li>Allows you to test policies for each user, group and role.</li>
@@ -369,8 +391,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org76b5990" class="outline-3">
-<h3 id="org76b5990"><span class="section-number-3">2.6.</span> Example policy document</h3>
+<div id="outline-container-orgac49e45" class="outline-3">
+<h3 id="orgac49e45"><span class="section-number-3">2.6.</span> Example policy document</h3>
 <div class="outline-text-3" id="text-2-6">
 <div class="org-src-container">
 <pre class="src src-json">{
@@ -389,8 +411,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 
-<div id="outline-container-orgc1fae27" class="outline-2">
-<h2 id="orgc1fae27"><span class="section-number-2">3.</span> EC2 (Elastic Compute Cloud)</h2>
+<div id="outline-container-org16920fb" class="outline-2">
+<h2 id="org16920fb"><span class="section-number-2">3.</span> EC2 (Elastic Compute Cloud)</h2>
 <div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Secure and resizable compute capacity in the cloud.</li>
@@ -400,12 +422,12 @@ org_html_manager.setup();  // activate after the parameters are set
 <li>Nothing wasted as it scales with demand.</li>
 </ul>
 </div>
-<div id="outline-container-org8675a99" class="outline-3">
-<h3 id="org8675a99"><span class="section-number-3">3.1.</span> Pricing Options</h3>
+<div id="outline-container-orge904248" class="outline-3">
+<h3 id="orge904248"><span class="section-number-3">3.1.</span> Pricing Options</h3>
 <div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org95d772f" class="outline-4">
-<h4 id="org95d772f"><span class="section-number-4">3.1.1.</span> On demand</h4>
+<div id="outline-container-orga50f125" class="outline-4">
+<h4 id="orga50f125"><span class="section-number-4">3.1.1.</span> On demand</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <ul class="org-ul">
 <li>Pay by time used.</li>
@@ -414,8 +436,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org97293a7" class="outline-4">
-<h4 id="org97293a7"><span class="section-number-4">3.1.2.</span> Reserved</h4>
+<div id="outline-container-orgf38196a" class="outline-4">
+<h4 id="orgf38196a"><span class="section-number-4">3.1.2.</span> Reserved</h4>
 <div class="outline-text-4" id="text-3-1-2">
 <ul class="org-ul">
 <li>Reserve capacity, get a discount from use.</li>
@@ -443,8 +465,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org38a64ff" class="outline-4">
-<h4 id="org38a64ff"><span class="section-number-4">3.1.3.</span> Spot</h4>
+<div id="outline-container-orgc0c15f8" class="outline-4">
+<h4 id="orgc0c15f8"><span class="section-number-4">3.1.3.</span> Spot</h4>
 <div class="outline-text-4" id="text-3-1-3">
 <ul class="org-ul">
 <li>Purchase unused capacity at a discount.</li>
@@ -456,8 +478,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb92392f" class="outline-4">
-<h4 id="orgb92392f"><span class="section-number-4">3.1.4.</span> Dedicated</h4>
+<div id="outline-container-org9aaee64" class="outline-4">
+<h4 id="org9aaee64"><span class="section-number-4">3.1.4.</span> Dedicated</h4>
 <div class="outline-text-4" id="text-3-1-4">
 <ul class="org-ul">
 <li>Rent a physical server only for your use.</li>
@@ -467,16 +489,18 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
-<div id="outline-container-org656219b" class="outline-3">
-<h3 id="org656219b"><span class="section-number-3">3.2.</span> EBS (Elastic Block Store)</h3>
+<div id="outline-container-org5f0d4be" class="outline-3">
+<h3 id="org5f0d4be"><span class="section-number-3">3.2.</span> EBS (Elastic Block Store)</h3>
 <div class="outline-text-3" id="text-3-2">
 <ul class="org-ul">
 <li>Storage volumes attached to EC2 instances.</li>
 <li>Works as a local system disk.</li>
+<li>Possible to create new volumes from snapshots of other volumes.</li>
+<li>Snapshots of encrypted volumes are encrypted and snapshots of unencrypted are unencrypted by default.</li>
 </ul>
 </div>
-<div id="outline-container-orgbb4a783" class="outline-4">
-<h4 id="orgbb4a783"><span class="section-number-4">3.2.1.</span> Advantages</h4>
+<div id="outline-container-org2b7d58b" class="outline-4">
+<h4 id="org2b7d58b"><span class="section-number-4">3.2.1.</span> Advantages</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <ul class="org-ul">
 <li>Designed for critical workloads.</li>
@@ -486,12 +510,12 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </div>
-<div id="outline-container-org8be6da4" class="outline-4">
-<h4 id="org8be6da4"><span class="section-number-4">3.2.2.</span> Types</h4>
+<div id="outline-container-orgc5024d5" class="outline-4">
+<h4 id="orgc5024d5"><span class="section-number-4">3.2.2.</span> Types</h4>
 <div class="outline-text-4" id="text-3-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org7e357f7"></a>General purpose SSD (gp2)<br />
+<li><a id="orgb9a5075"></a>General purpose SSD (gp2)<br />
 <div class="outline-text-5" id="text-3-2-2-1">
 <ul class="org-ul">
 <li>Balance between price and performance.</li>
@@ -500,7 +524,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </li>
-<li><a id="org085d20c"></a>Provisioned IOPS SSD (io1)<br />
+<li><a id="org6beb082"></a>Provisioned IOPS SSD (io1)<br />
 <div class="outline-text-5" id="text-3-2-2-2">
 <ul class="org-ul">
 <li>High performance and highest price.</li>
@@ -510,7 +534,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </li>
-<li><a id="org43c874a"></a>Provisioned IOPS SSD (io2)<br />
+<li><a id="orgbd225ba"></a>Provisioned IOPS SSD (io2)<br />
 <div class="outline-text-5" id="text-3-2-2-3">
 <ul class="org-ul">
 <li>Latest generation.</li>
@@ -522,7 +546,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </li>
-<li><a id="org585b4b6"></a>Throughput Optimized HDD (st1)<br />
+<li><a id="org204b3b6"></a>Throughput Optimized HDD (st1)<br />
 <div class="outline-text-5" id="text-3-2-2-4">
 <ul class="org-ul">
 <li>Low-cost HDD volume.</li>
@@ -541,7 +565,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </ul>
 </div>
 </li>
-<li><a id="org0c03053"></a>Cold HDD (sc1)<br />
+<li><a id="org5d93cf8"></a>Cold HDD (sc1)<br />
 <div class="outline-text-5" id="text-3-2-2-5">
 <ul class="org-ul">
 <li>Lowest cost option.</li>
@@ -556,8 +580,8 @@ org_html_manager.setup();  // activate after the parameters are set
 </li>
 </ol>
 </div>
-<div id="outline-container-orgf91e336" class="outline-4">
-<h4 id="orgf91e336"><span class="section-number-4">3.2.3.</span> IOPS vs Throughput</h4>
+<div id="outline-container-org4b4cb47" class="outline-4">
+<h4 id="org4b4cb47"><span class="section-number-4">3.2.3.</span> IOPS vs Throughput</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <ul class="org-ul">
 <li>IOPS
@@ -576,11 +600,154 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 </div>
 </div>
+<div id="outline-container-orgbe8a516" class="outline-3">
+<h3 id="orgbe8a516"><span class="section-number-3">3.3.</span> Elastic Load Balancer</h3>
+<div class="outline-text-3" id="text-3-3">
+<ul class="org-ul">
+<li>Distributes network traffic across a group of servers.</li>
+<li>Can stop sending requests to servers with issues.</li>
+<li>Easy to increase number of servers and connect them to the load balancer.</li>
+</ul>
+</div>
+<div id="outline-container-org9403330" class="outline-4">
+<h4 id="org9403330"><span class="section-number-4">3.3.1.</span> Application Load Balancer</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li>HTTP/HTTPS.</li>
+<li><a href="#orgb844c7a">Layer 7</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org990b496" class="outline-4">
+<h4 id="org990b496"><span class="section-number-4">3.3.2.</span> Network Load Balancer</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<ul class="org-ul">
+<li>TCP.</li>
+<li>High performance.</li>
+<li><a href="#orgb844c7a">Layer 4</a>.</li>
+<li>Handles millions of requests/s.</li>
+<li>Ultra-low latency.</li>
+<li>Most expensive.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgab8e058" class="outline-4">
+<h4 id="orgab8e058"><span class="section-number-4">3.3.3.</span> Classic Load Balancer (Legacy)</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li>HTTP/HTTPS and TCP.</li>
+<li>Support <a href="#orgb844c7a">Layer 7</a> features like sticky sessions and <a href="#org61e08f5">X-Forwarded-For Header</a>.</li>
+<li>Support <a href="#orgb844c7a">Layer 4</a> load balancing for pure TCP applications.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org61e08f5" class="outline-4">
+<h4 id="org61e08f5"><span class="section-number-4">3.3.4.</span> X-Forwarded-For Header</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<ul class="org-ul">
+<li>Identify the originating IP address of the client.</li>
+<li>Used because the one calling the server will be the load balancer so its IP address will appear as the caller.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7bbd53f" class="outline-4">
+<h4 id="org7bbd53f"><span class="section-number-4">3.3.5.</span> Common Load Balancer Errors</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<ul class="org-ul">
+<li>Error 504
+<ul class="org-ul">
+<li>Gateway Timeout.</li>
+<li>Target failed to respond e.g.
+<ul class="org-ul">
+<li>Load balancer could not establish a connection to the target.</li>
+<li>Your application is having issues.</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2586a4a" class="outline-3">
+<h3 id="org2586a4a"><span class="section-number-3">3.4.</span> RDS (Relational Database Service)</h3>
+</div>
+</div>
+<div id="outline-container-org1b21e0e" class="outline-2">
+<h2 id="org1b21e0e"><span class="section-number-2">4.</span> Route 53</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Amazon&rsquo;s DNS service.</li>
+<li>Allows you to map domain names to:
+<ul class="org-ul">
+<li>EC2 instances.</li>
+<li>Load Balancers.</li>
+<li>S3 buckets.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgff4f4a8" class="outline-2">
+<h2 id="orgff4f4a8"><span class="section-number-2">5.</span> CLI</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Access AWS features using command line.</li>
+<li>Needs Access key id and Secret access key.</li>
+</ul>
+</div>
+<div id="outline-container-orgb2dce1e" class="outline-3">
+<h3 id="orgb2dce1e"><span class="section-number-3">5.1.</span> Pagination</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>CLI returns by default all info in blocks of 1000.</li>
+<li>Adjusting pagination size may help with issues of time out or size.</li>
+<li>Still retrieves full list but performs more calls with less info in each.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb844c7a" class="outline-2">
+<h2 id="orgb844c7a"><span class="section-number-2">6.</span> 7 Layer Model</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Conceptual Framework to describe functions of a network.
+</p>
+<ol class="org-ol">
+<li>Physical
+<ul class="org-ul">
+<li>Bits and bytes over physical devices.</li>
+</ul></li>
+<li>Data link
+<ul class="org-ul">
+<li>Physically transmits data based on MAC addresses.</li>
+</ul></li>
+<li>Network
+<ul class="org-ul">
+<li>Logically routes packets, based on IP address.</li>
+</ul></li>
+<li>Transport
+<ul class="org-ul">
+<li>Transmits data using TCP and UDP.</li>
+</ul></li>
+<li>Session
+<ul class="org-ul">
+<li>Mantains connections and sessions.</li>
+</ul></li>
+<li>Presentation
+<ul class="org-ul">
+<li>Data in a usable format.</li>
+<li>Encryption, SSH.</li>
+</ul></li>
+<li>Application
+<ul class="org-ul">
+<li>What the end user sees.</li>
+<li>HTTP, Web browsers.</li>
+</ul></li>
+</ol>
+</div>
 </div>
 
-<div id="outline-container-org6aef48a" class="outline-2">
-<h2 id="org6aef48a"><span class="section-number-2">4.</span> Whitepapers</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgddbc11d" class="outline-2">
+<h2 id="orgddbc11d"><span class="section-number-2">7.</span> Whitepapers</h2>
+<div class="outline-text-2" id="text-7">
 <ul class="org-ul">
 <li><a href="https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html?did=wp_card&amp;trk=wp_card">AWS Well Architected Framework</a></li>
 <li><a href="https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html?did=wp_card&amp;trk=wp_card">Practicing Continuous Integration and Continuous Delivery on AWS</a></li>
@@ -590,7 +757,7 @@ org_html_manager.setup();  // activate after the parameters are set
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: JOÃO VICTOR RODRIGUES HILARIO</p>
-<p class="date">Created: 2021-09-01 qua 17:45</p>
+<p class="date">Created: 2021-09-06 seg 23:29</p>
 </div>
 </body>
 </html>
